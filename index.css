@@ -1,94 +1,103 @@
-
 /*=============================================
 =            GLOBAL            =
 =============================================*/
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
-    list-style:  none;
+    list-style: none;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
-/*=====  End of GLOBAL  ======*/
-body{
-    background: white;
-    color:black;
 
-} 
-.contenedor{
+/*=====  End of GLOBAL  ======*/
+body {
+    background: white;
+    color: black;
+
+}
+
+.contenedor {
     display: grid;
 
-    grid-template-areas: "header header  header"        
-                         "aside  article article"
-                         "aside  article article"
-                         "footer footer  footer";
+    grid-template-areas: "header header  header"
+        "aside  article article"
+        "aside  article article"
+        "footer footer  footer";
 
-    grid-template-columns: 2fr 3fr 5fr;  
-    grid-template-rows: 2fr 3fr 5fr 1fr;            
+    grid-template-columns: 2fr 3fr 5fr;
+    grid-template-rows: 2fr 3fr 5fr 1fr;
     grid-gap: 5px;
-    margin: auto;  
+    margin: auto;
     text-align: center;
     grid-auto-flow: dense;
 }
-header{
+
+header {
     grid-area: header;
     background: red;
 }
-nav{ 
+
+nav {
     background: rgb(255, 251, 0);
 }
-aside{
+
+aside {
     grid-area: aside;
     background: rgb(129, 20, 93);
 }
 
 
-article{
+article {
     grid-area: article;
     background: rgb(17, 155, 136);
 }
-    article  button{
-        text-decoration: none;
-      
-        padding: 20px;
-        font-weight: 800;
-        font-size: 25px;
-        color: black;
-        background-color: #9b0e0e;
-    }
-    article button:hover{
-        color: #9b0e0e;
-        background-color: #bc6355;
-        text-decoration: none;
-    }
+
+article button {
+    text-decoration: none;
+    padding: 20px;
+    font-weight: 800;
+    font-size: 25px;
+    color: black;
+    background-color: #9b0e0e;
+}
+
+article button:hover {
+    color: #9b0e0e;
+    background-color: #bc6355;
+    text-decoration: none;
+}
+
 /*=============================================
 =            footer            =
 =============================================*/
-footer{
+footer {
     grid-area: footer;
-    
+
 }
-    footer  ul{
-        overflow: hidden;
-        background-color: #333;
-       
-    }
-    footer  ul  li{
-        display: inline-block;
-     
-    }
-    footer  ul  li a{
-        display: block;
-        color: white;
-        text-align: center;    
-        text-decoration: none;
-        padding: 14px  150px;
-    }
 
-    footer  ul  li a:hover{
-       background-color: aqua; 
+footer ul {
+    overflow: hidden;
+    background-color: #333;
 
-    }
+}
+
+footer ul li {
+    display: inline-block;
+
+}
+
+footer ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 150px;
+}
+
+footer ul li a:hover {
+    background-color: aqua;
+
+}
 
 /*=====  End of footer  ======*/
 
@@ -99,21 +108,19 @@ footer{
 =============================================*/
 
 /* ipad */
-@media screen and (max-width:768px){
-    .contenedor{
-        grid-template-areas: "header header  "            
-                             "article article"
-                             "aside  aside   "
-                             "footer footer  ";
-
+@media screen and (max-width:768px) {
+    .contenedor {
+        grid-template-areas: "header header  "
+            "article article"
+            "aside  aside   "
+            "footer footer  ";
+        grid-template-columns: 2fr 3fr ;
     }
-   
+
 
 }
 
 /* iphone */
-@media screen and (max-width:414px){
+@media screen and (max-width:414px) {}
 
-}
 /*=====  End of Breakpoints  ======*/
-
